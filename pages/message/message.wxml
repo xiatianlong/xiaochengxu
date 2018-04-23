@@ -1,0 +1,45 @@
+<!--pages/message/message.wxml-->
+<view>
+  <view id='messageContent'>
+    <textarea placeholder="在这里填写留言信息..." maxlength="200" bindinput="textareaInput" value='{{textareaInputValue}}' id='messageValue' />
+    <view id='messageCnt'>{{textareaInputLength}}/200</view>
+  </view>
+  <view id='messageBtns'>
+    <view class='vertical-middle'>
+      <button wx:if="{{!hasUserInfo && canIUse}}" type='primary' plain="true" size='mini' open-type="getUserInfo" bindgetuserinfo="getUserInfo">我要留名</button>
+      <block wx:else>
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
+    </view>
+    <view>
+      <button type='primary' id='submitBtn' bindtap='submitComment'>提交留言</button>
+    </view>
+  </view>
+</view>
+
+<!-- 留言列表 begin -->
+<view style='margin-bottom:30rpx;'>
+
+  <block wx:for="{{dataList}}">
+    <view class='messageListItem'>
+      <block wx:if="{{item.commentHeadImg}}">
+        <view>
+          <image class="user-img" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        </view>
+      </block>
+      <block wx:else>
+        <view>
+          <image class="user-img" src="../../resource/images/logo.png" background-size="cover"></image>
+        </view>
+      </block>
+      <view>{{item.commentContent || ' '}}</view>
+      <view>
+        <view>{{item.commentName || ' '}}</view>
+        <view>{{item.commentArea || ' '}}</view>
+        <view>{{item.fmtCreateTimeCn || ' '}}</view>
+      </view>
+    </view>
+  </block>
+</view>
+<!-- 留言列表 end -->

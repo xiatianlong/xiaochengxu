@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/home/list",
+    "pages/template/template",
+    "pages/message/message",
+    "pages/about/about",
+    "pages/articleDetail/articleDetail",
+    "pages/noteDetail/noteDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "夏天龙的个人博客",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#d34432",
+    "list": [
+      {
+        "pagePath": "pages/home/list",
+        "text": "Home",
+        "iconPath": "resource/images/home.png",
+        "selectedIconPath": "resource/images/home_red.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "留言",
+        "iconPath": "resource/images/message.png",
+        "selectedIconPath": "resource/images/message_red.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "resource/images/about.png",
+        "selectedIconPath": "resource/images/about_red.png"
+      }
+    ]
+  }
+}

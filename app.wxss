@@ -1,0 +1,72 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: block;
+  font-size: 30rpx;
+  line-height: 1.5;
+  background: #F7F7F7;
+  /* font-family:SimHei,"Microsoft Yahei",sans-serif; */
+} 
+.vertical-container-center {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.vertical-container-top {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: flex-start;
+    align-items:flex-start;
+}
+
+/*垂直居中*/
+.vertical-middle {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+}
+/*垂直水平居中*/
+.horizontal-vertical-middle{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/*垂直居中，水平靠右*/
+.vertical-middle-horizontal-right {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+}
+/*水平居中，垂直靠下*/
+.horizontal-middle-vertical-bottom{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}
+.text-l{
+  text-align: left;
+}
+.text-c{
+  text-align: center;
+}
+.text-r{
+  text-align: right;
+}

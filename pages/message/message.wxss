@@ -1,0 +1,96 @@
+/* pages/message/message.wxss */
+
+#messageContent {
+  border-top: 1px solid #f5f5f5;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+#messageValue {
+  width: calc(100% - 20rpx);
+  height: 210rpx;
+  padding: 10rpx;
+  font-size: 28rpx;
+}
+
+#messageCnt {
+  text-align: right;
+  padding: 10rpx;
+  font-size: 24rpx;
+}
+
+#messageBtns {
+  display: flex;
+  margin-top: 25rpx;
+}
+
+#submitBtn {
+  width: 80%;
+}
+
+#messageBtns > view {
+  flex-grow: 1;
+}
+
+.userinfo-avatar {
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+  margin-left: 10rpx;
+}
+
+.userinfo-nickname {
+  margin-left: 20rpx;
+  font-size: 26rpx;
+}
+
+.messageListItem {
+  margin-top: 15rpx;
+  border-top: 1px solid #f5f5f5;
+  padding-top: 10rpx;
+}
+
+.messageListItem > view:nth-child(1), .messageListItem > view:nth-child(2) {
+  float: left;
+}
+
+.messageListItem > view:nth-child(1) .user-img {
+  height: 70rpx;
+  width: 70rpx;
+  border-radius: 50%;
+  margin-left: 10rpx;
+}
+
+.messageListItem > view:nth-child(2) {
+  width: 640rpx;
+  padding: 15rpx;
+  font-size: 26rpx;
+  text-align: justify;
+  word-break: break-all;
+}
+
+.messageListItem > view:nth-child(3) {
+  clear: both;
+}
+
+.messageListItem > view:nth-child(3) > view {
+  text-align: right;
+  display: inline-block;
+  padding-right: 15rpx;
+  font-size: 24rpx;
+  color: #b3b3b3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.messageListItem > view:nth-child(3) > view:nth-child(1) {
+  width: calc(30% - 15rpx);
+}
+
+.messageListItem > view:nth-child(3) > view:nth-child(2) {
+  width: calc(50% - 15rpx);
+}
+
+.messageListItem > view:nth-child(3) > view:nth-child(3) {
+  width: calc(20% - 15rpx);
+}

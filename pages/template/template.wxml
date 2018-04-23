@@ -1,0 +1,49 @@
+<template name="articleItem">
+  <view class='item-content {{item.type}}' bindtap='goDetail' data-biz-type='{{item.type}}' data-biz-id='{{item.id}}' id='{{item.orderKey}}'>
+    <view wx:if="{{item.imgUrl != null && item.imgUrl !== ''}}">
+      <view class='item-content-header'>
+        <view class='item-content-left'>
+          <view class='item-content-title'>
+            <block wx:if="{{item.top}}">
+              <view class='item-top-label'>置顶</view>
+            </block>
+            {{item.title}}
+          </view>
+          <view class='item-content-introduction'>{{item.introduction}}</view>
+        </view>
+        <view class='item-content-right'>
+          <image mode="widthFix" src='{{item.imgUrl}}'></image>
+        </view>
+      </view>
+      <view class='item-content-bottom'>
+        <view class='vertical-middle'>
+          <image src='../../resource/images/user.png'></image>{{item.userName}}</view>
+        <view class='vertical-middle'>
+          <image src='../../resource/images/time.png'></image>{{item.fmtCreateTimeCn}}</view>
+        <view class='vertical-middle-horizontal-right'>
+          <image src='../../resource/images/see.png'></image>{{item.viewsCnt}}</view>
+      </view>
+    </view>
+    <view wx:else>
+      <view class='item-content-noImages'>
+        <view class='item-content-title'>
+          <block wx:if="{{item.top}}">
+              <view class='item-top-label'>置顶</view>
+            </block>
+          {{item.title}}
+        </view>
+        <block wx:if="{{item.type==='article'}}">
+          <view class='item-content-introduction'>{{item.introduction}}</view>
+        </block>
+      </view>
+      <view class='item-content-bottom'>
+        <view class='vertical-middle'>
+          <image src='../../resource/images/user.png'></image>{{item.userName}}</view>
+        <view class='vertical-middle'>
+          <image src='../../resource/images/time.png'></image>{{item.fmtCreateTimeCn}}</view>
+        <view class='vertical-middle-horizontal-right'>
+          <image src='../../resource/images/see.png'></image>{{item.viewsCnt}}</view>
+      </view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,17 @@
+<import src="../../wxParse/wxParse.wxml" />
+<view>
+  <view class='detail-title'>{{data.articleTitle}}</view>
+  <view class='detail-userName'>{{data.userName}}</view>
+  <view class='detail-createTime'>{{data.fmtCreateTime}}</view>
+  <view class='detail-catefory-content'>
+  <block wx:for="{{data.categoryList}}" wx:for-item="catefory">
+    <view class='detail-catefory'>{{catefory}}</view>
+  </block>
+  </view>
+  <!-- 内容 begin -->
+  <view>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view>
+  <!-- 内容 end -->
+
+</view>

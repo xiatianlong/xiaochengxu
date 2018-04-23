@@ -1,0 +1,24 @@
+<!--pages/about/about.wxml-->
+<view>
+  <view class='text-c'>
+    <image id='about-head-img' src='../../resource/images/xiatianlong.jpg'></image>
+  </view>
+  <view class='about-me-memo'>初级程序猿</view>
+  <view class='about-me-memo'>想成为全栈的初级java软件工程师</view>
+  <view class='about-me-memo'>怀揣着梦想而又享受平凡生活的年轻人</view>
+
+  <view id='about-xcx-content'>
+    <view class='about-xcx-title'>关于小程序</view>
+    <view class='about-xcx-item'>小程序数据来源于PC网站</view>
+    <view class='about-xcx-item'>PC网站地址：https://www.xiatianlong.com</view>
+    <view class='about-xcx-item'>开发目的是为了能在移动端浏览网站内容，因为懒，不想做PC网站的移动端适配。不排除哪天勤快一下。</view>
+  </view>
+
+  <view id='about-contact-me'>
+    <view class='about-contact-title'>联系我</view>
+    <view class='about-contact-item'>xiatianlong@hotmail.com</view>
+    <view class='text-c'>
+      <image id='about-me-wechat' src='../../resource/images/wechat.jpg'></image>
+    </view>
+  </view>
+</view>

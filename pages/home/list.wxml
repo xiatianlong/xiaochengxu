@@ -1,0 +1,28 @@
+<import src="../template/template.wxml" />
+
+<view class="container">
+  <!-- banner begin -->
+  <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image mode="aspectFill" src="{{item.bannerImgFile.fileUrl}}" class="slide-image" mode="widthFix"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- banner end -->
+
+  <!-- 搜索begin -->
+  <view id="homeSearchContent">
+    <input id="homeSearchInput" placeholder="请输入搜索关键字" confirm-type="搜索" value="{{searchInputValue}}" bindinput="listenerInput" bindconfirm="searchSubmit"/>
+    <icon id="homeSearchIcon" type="search" size="16" color="gray"/>
+    <icon id="homeClearIcon" class="{{searchClearIcon}}" type="clear" size="16" color="gray" bindtap="clearInputValue"/>
+  </view>
+  <!-- 搜索end -->
+
+  <!-- data list begin -->
+  <block class="classname" wx:for="{{dataList}}" wx:key="id">
+      <template is="articleItem" data="{{item}}" />
+  </block>
+  <!-- data list end -->
+
+</view>

@@ -1,0 +1,39 @@
+/* pages/about/about.wxss */
+
+#about-head-img {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+  margin-top:20rpx;
+}
+
+.about-me-memo {
+  text-align: center;
+  font-size: 32rpx;
+  font-family: sans-serif;
+  margin-top: 15rpx;
+}
+
+#about-xcx-content, #about-contact-me {
+  margin-left: 3%;
+  margin-top: 30rpx;
+  padding: 20rpx;
+  text-align: justify;
+}
+
+.about-xcx-title, .about-contact-title {
+  font-size: 32rpx;
+  color: #5fb878;
+}
+
+.about-xcx-item, .about-contact-item {
+  font-size: 28rpx;
+  margin-top: 15rpx;
+}
+
+#about-me-wechat {
+  width: 400rpx;
+  height: 400rpx;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
